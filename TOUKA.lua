@@ -133,3 +133,9 @@ local args = {
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
 end)
+
+local Section = Window:NewSection("Others")
+
+Section:CreateTextbox("INF STAIMNA", function()
+
+end)
