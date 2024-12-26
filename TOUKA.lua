@@ -86,6 +86,42 @@ Section:CreateButton("Equip Winter Gold card", function()
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
 end)
 
+Section:CreateButton("Equip Crystal Card", function()
+  local args = {
+    [1] = "Cards",
+    [2] = "Crystal"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Equip LEGEND Card", function()
+  local args = {
+    [1] = "Cards",
+    [2] = "LEGEND"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Equip VIP Card", function()
+  local args = {
+    [1] = "Cards",
+    [2] = "VIP"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Equip ADMIN Card", function()
+  local args = {
+    [1] = "Cards",
+    [2] = "YingYang"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
 local Section = Window:NewSection("COSMETICS")
 
 Section:CreateTextbox("Equip Any COSMETIC", function(cos_text)
