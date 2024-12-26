@@ -164,7 +164,7 @@ end)
 
 local Section = Window:NewSection("Others")
 
-Section:CreateTextbox("INF STAIMNA", function()
+Section:CreateButton("INF STAIMNA", function()
 local args = {
     [1] = 0/0
 }
@@ -172,6 +172,6 @@ local args = {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
 end)
 
-Section:CreateSlider("speed changer", "YO", 500, 0, function(speed)
+Section:CreateSlider("speed changer", 0, 500, 0, function(speed)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
 end)
