@@ -142,6 +142,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
-
 end)
 
+Section:NewSlider("speed changer", "Yo", 500, 0, function(speed)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+end)
