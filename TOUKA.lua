@@ -135,15 +135,6 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService
   end
 end)
 
-Section:CreateButton("Get ADMIN COSMETIC", function()
-local args = {
-    [1] = "Cosmetics",
-    [2] = "SHADOW"
-}
-
-game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end)
-
 Section:CreateButton("Get Snowman Cape", function()
 local args = {
     [1] = "Cosmetics",
