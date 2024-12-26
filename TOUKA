@@ -54,7 +54,15 @@ game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService
 end)
 
 Section:CreateTextbox("Equip Any goaleffect", function(goal_name)
+if goal_name ~= "" then
+    local args = {
+    [1] = "GoalEffects",
+    [2] = goal_name
+}
 
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+        end
 end)
 local Section = Window:NewSection("CARDS")
 local Section = Window:NewSection("COSMETICS")
