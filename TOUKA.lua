@@ -53,16 +53,15 @@ local args = {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
 end)
 
-Section:CreateTextbox("Equip Any goaleffect", function(goal_name)
-if goal_name ~= "" then
-    local args = {
+Section:CreateTextbox("Equip Any goaleffect", function(goal_text)
+if goal_text ~= "" then
+   local args = {
     [1] = "GoalEffects",
-    [2] = goal_name
+    [2] = "Gingerbread"
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
-end)
-        end
+  end
 end)
 local Section = Window:NewSection("CARDS")
 local Section = Window:NewSection("COSMETICS")
