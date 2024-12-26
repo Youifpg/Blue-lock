@@ -137,5 +137,11 @@ end)
 local Section = Window:NewSection("Others")
 
 Section:CreateTextbox("INF STAIMNA", function()
+local args = {
+    [1] = 0/0
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.StaminaService.RE.DecreaseStamina:FireServer(unpack(args))
 
 end)
+
