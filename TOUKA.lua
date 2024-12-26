@@ -8,6 +8,17 @@ local Window = Library:NewWindow("ARBIX HUB | BLUE LOCK *OP*")
 
 local Section = Window:NewSection("GOAL EFFECTS")
 
+Section:CreateTextbox("Equip Any goaleffect", function(goal_text)
+if goal_text ~= "" then
+   local args = {
+    [1] = "GoalEffects",
+    [2] = goal_text
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+  end
+end)
+
 Section:CreateButton("Get WONDERLAND effect", function()
 local args = {
     [1] = "GoalEffects",
@@ -53,52 +64,72 @@ local args = {
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
 end)
 
-Section:CreateTextbox("Equip Any goaleffect", function(goal_text)
-if goal_text ~= "" then
+local Section = Window:NewSection("CARDS")
+Section:CreateTextbox("Equip Any card you want", function(card_text)
+if card_text ~= "" then
    local args = {
-    [1] = "GoalEffects",
-    [2] = goal_text
+    [1] = "Cards",
+    [2] = card_text
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
   end
 end)
-local Section = Window:NewSection("CARDS")
+
+Section:CreateButton("Equip Winter Gold card", function()
+  local args = {
+    [1] = "Cards",
+    [2] = "Golden Winter"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
 local Section = Window:NewSection("COSMETICS")
--- Button Add Scripts in it
 
-Section:CreateButton("ButtonName", function()
-print("Clicked")
-end)
- 
--- TextBox You can make keysystem 
+Section:CreateTextbox("Equip Any COSMETIC", function(cos_text)
+if cos_text ~= "" then
+   local args = {
+    [1] = "Cosmetics",
+    [2] = cos_text
+}
 
-Section:CreateTextbox("TextBox", function(text)
-        print(text)
-end)
- 
--- You Can Make Toggles
-
-Section:CreateToggle("ToggleName", function(value)
-print(value)
-end)
- 
--- DropDown is Same As TextBox But Different
-
-Section:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
-print(text)
-end)
- 
--- Slider You Can Make Speed Silder or jump Slider
-
-Section:CreateSlider("Slider", 0, 100, 15, false, function(value)
-print(value)
- end)
-
--- Picker You Can make esp 
-
-Section:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
-print(value)
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+  end
 end)
 
--- Wizard Ui By BloodBall
+Section:CreateButton("Get ADMIN COSMETIC", function()
+local args = {
+    [1] = "Cosmetics",
+    [2] = "SHADOW"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Get Snowman Cape", function()
+local args = {
+    [1] = "Cosmetics",
+    [2] = "Snowman Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Get BEST CAPE", function()
+local args = {
+    [1] = "Cosmetics",
+    [2] = "Peppermint Cape"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
+
+Section:CreateButton("Get Christmas Aura", function()
+local args = {
+    [1] = "Cosmetics",
+    [2] = "Christmas Aura"
+}
+
+game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
+end)
