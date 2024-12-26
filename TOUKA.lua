@@ -57,7 +57,7 @@ Section:CreateTextbox("Equip Any goaleffect", function(goal_text)
 if goal_text ~= "" then
    local args = {
     [1] = "GoalEffects",
-    [2] = "Gingerbread"
+    [2] = goal_text
 }
 
 game:GetService("ReplicatedStorage").Packages.Knit.Services.CustomizationService.RE.Customize:FireServer(unpack(args))
